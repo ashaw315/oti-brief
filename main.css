@@ -191,6 +191,8 @@ button {
     gap: 1rem;
 }
 
+/* Form Inputs */
+
 .en-input-container {
     display: flex;
     flex-direction: row;
@@ -248,6 +250,8 @@ input[type="text"]:focus.invalid {
     resize: none;
 }
 
+/* Form Image */
+
 #form-image {
     margin: 0;
 }
@@ -257,6 +261,8 @@ input[type="text"]:focus.invalid {
     height: auto;
     border-radius: 8px
 }
+
+/* Footer */
 
 footer {
     background: #222222;
