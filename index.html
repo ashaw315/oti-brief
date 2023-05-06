@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Health.US</title>
+        <meta name="description" content="This is an example page for Health.US.">
+        <meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header id="header-container">
+            <a href="/">
+                <h2 class="page-title">Health.US</h2>
+            </a>
+            <nav id="nav-links">               
+                <a class='nav-link' href="/">Home</a>
+                <a class='nav-link' href="/about">About</a>
+                <a class='nav-link' href="/contact">Contact</a>
+                <a class='nav-link' href="/join">Join</a>
+            </nav>
+        </header>
+        <section id="hero-banner">
+            <figure id="hero-image">
+                <img src="/images/hero-image.svg" alt="Graphic of nurse and mobile phone" width="348" height="272">
+            </figure>
+            <div id="hero-text-container">
+                <h1 class="hero-text">Get care now</h1>
+                <p class="hero-text">Speak with a healthcare proffesional at home</p>
+            </div>
+        </section>
+        <section id="form-section">
+            <div id="form-container">
+                <div id="success-message">
+                    <p>Thank you for your submission</p>
+                    <button id="success-button">X</button>
+                </div>
+                <div id="form-wrapper">
+                    <div id="form">
+                        <h2>Sign up to learn more</h2>
+                        <form action="/submit-form" method="post">
+                            <div class="en-input-container">
+                                <div class="en-input-wrapper">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" class="invalid" required>
+                                </div>
+                                <div class="en-input-wrapper">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                            </div>
+                            <div class="m-input-container">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message"></textarea>
+                            </div>
+                            <button id="submit" type="submit">Submit</button>
+                        </form>
+                    </div>
+                    <figure id="form-image">
+                            <img src="images/patient.jpg" alt="Patient receiving care" width= "480" height= "312.3px"/>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div id="footer-info">
+                <a href="mailto:health.us">health.us</a>
+                <a href="tel:+1555555555">(555) 555-5555</a>
+            </div>
+        </footer>
+        <script src="/page.js"></script>
+    </body>
+</html>

@@ -1,0 +1,407 @@
+* {
+    position: relative;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+h2{
+    font-size: 2rem;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    font-weight: 700;
+    font-family: 'Roboto';
+    cursor: pointer;
+}
+
+/* Header */
+
+.page-title {
+    margin: 0;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+#header-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: #EEEEEE;
+    padding: 6px 16px;
+}
+
+#header-container a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    margin: 0 1rem 0 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+
+#hero-banner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+    background: #004CBE;
+}
+
+#hero-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 480px;
+    color: #FFFFFF;
+    gap: 1rem;
+}
+
+#hero-text-container p {
+    font-size: 1.5rem;
+}
+
+.hero-text {
+    width: 85%;
+}
+
+/* Success Message */
+
+#success-message {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #EEEEEE;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    transform: translateY(-4rem);
+    opacity: 0;
+    transition: ease-out 1s;
+    /* z-index: -1; */
+}
+
+#success-message p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+#success-message.submitted {
+    transform: translate(0);
+    opacity: 1;
+}
+
+#success-message button {
+    border: none;
+    font-size: 1.5rem;
+}
+
+/* Form */
+
+#form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#form-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    transform: translateY(-3rem);
+    transition: ease-out 1s;
+}
+
+#form-wrapper.submitted {
+    transform: translateY(0);
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 0;
+}
+
+#form form, button {
+    font-size: 1.25rem;
+}
+
+#form button {
+    background: #004CBE;
+    border-radius: 4px;
+    color: white;
+    padding: 16px 48px;
+    border: none;
+    transition: ease 0.2s;
+}
+
+#form button:hover {
+    background: #003789;
+    color: #f6f9ff;
+}
+
+#form-wrapper form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 1rem;
+}
+
+.en-input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 30rem;
+}
+
+.en-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.m-input-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.en-input-container input {
+    height: 2.5rem;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 4px;
+}
+
+input[type="email"]:focus.valid {
+    outline: 1px solid rgb(0, 255, 38);
+    border-color: rgb(0, 255, 38);
+}
+
+input[type="email"]:focus.invalid {
+    outline: 1px solid red;
+    border-color: red;
+}  
+
+.m-input-container textarea {
+    height: 8rem;
+    width: 30rem;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    resize: none;
+}
+
+#form-image {
+    margin: 0;
+}
+
+#form-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px
+}
+
+footer {
+    background: #222222;
+}
+
+#footer-info {
+    display: flex;
+    font-weight: 400;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem 0;
+    margin: 0 auto;
+    width: 992px;
+}
+
+footer a {
+    margin: 0;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media(max-width: 1030px) {
+
+    /* Form */
+    #form-wrapper {
+        flex-direction: column;
+    }
+
+    /* Footer */
+    #footer-info {
+        margin: 0 1rem;
+    }
+}
+
+@media(max-width: 925px) {
+
+    /* Hero Banner */
+
+    #hero-text-container h1 {
+        font-size: 3rem;
+    }
+
+    #hero-text-container p {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media(max-width: 800px) {
+    
+    /* Hero */
+    #hero-banner {
+        flex-direction: column;
+    }
+
+    #hero-image {
+        order: 2;
+    }
+
+    #hero-text-container {
+        order: 1;
+    }
+    
+}
+
+@media(max-width: 600px) {
+
+    /* Header */
+    #header-container {
+        flex-direction: column;
+        padding: 16px 16px;
+        gap: 1rem;
+    }
+
+    /* Hero */
+    #hero-text-container h1 {
+        font-size: 2rem;
+    }
+
+    #hero-text-container p {
+        font-size: 18px;
+    }
+
+    /* Form */
+
+    #form h2 {
+        font-size: 1.5rem;
+    }
+
+    .en-input-container {
+        flex-direction: column;
+    }
+
+    #form-section {
+        padding: 3rem 1rem;
+    }
+
+    #form-wrapper {
+        transform: translateY(0);
+    }
+
+    #success-message {
+        transform: translateY(0);
+        transition: ease-out 1s;
+        align-items: center;
+        display: none;
+    }
+
+    #success-message p {
+        font-size: 1rem;
+    }
+
+    #success-message.submitted {
+        display: flex;
+    }
+}
+
+@media(max-width: 500px) {
+
+    /* Header */
+    .nav-link {
+        margin: 0 0.75rem 0 0.75rem;
+    }
+
+    /* Hero */
+    #hero-image img {
+        width: 288px;
+        height: auto;
+    }
+
+    #hero-text-container {
+        width: 90%;
+    }
+
+    /* Form */
+    #success-message {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    #form-wrapper {
+        width: 90vw;
+    }
+
+    .en-input-container {
+        width: 90vw;
+    }
+
+    .m-input-container {
+        width: 90vw;
+    }
+
+    .m-input-container textarea {
+        width: auto;
+    }
+}
