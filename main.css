@@ -229,6 +229,16 @@ input[type="email"]:focus.invalid {
     border-color: red;
 }  
 
+input[type="text"]:focus.valid {
+    outline: 1px solid rgb(0, 255, 38);
+    border-color: rgb(0, 255, 38);
+}
+
+input[type="text"]:focus.invalid {
+    outline: 1px solid red;
+    border-color: red;
+} 
+
 .m-input-container textarea {
     height: 8rem;
     width: 30rem;

@@ -30,6 +30,22 @@ function validateEmail(email) {
     }
     });
 
+    // Check if name field is empty
+
+    name.addEventListener("input", () => {
+        const value = name.value;
+        console.log(value);
+        
+        // Check if the name field is empty
+        if (value === "") {
+          name.classList.remove("valid");
+          name.classList.add("invalid");
+        } else {
+          name.classList.remove("invalid");
+          name.classList.add("valid");
+        }
+      });
+
     // Add classes on submit for success message (click event for example purposes)
     const submit = document.getElementById("submit");
     const success = document.getElementById("success-message");
@@ -38,7 +54,7 @@ function validateEmail(email) {
     submit.addEventListener("click", (event) => {
         event.preventDefault();
             
-        if(hasClass(email, "valid")){
+        if(hasClass(email, "valid") && hasClass(name, "valid")){
             success.classList.add("submitted");
             form.classList.add("submitted")
         }
